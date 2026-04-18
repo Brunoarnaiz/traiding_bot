@@ -1,0 +1,63 @@
+⚠️  IMPORTANTE: ACTUALIZAR EL EA
+
+=====================================
+PROBLEMA DETECTADO
+=====================================
+
+El bot estaba abriendo operaciones SIN Stop Loss ni Take Profit.
+Esto es PELIGROSO - las operaciones no se cierran automáticamente.
+
+=====================================
+SOLUCIÓN
+=====================================
+
+He creado NixBridge_v2.mq5 que SÍ configura SL/TP automáticamente.
+
+=====================================
+CÓMO ACTUALIZAR (HAZLO AHORA)
+=====================================
+
+1. En MT5, haz clic derecho en el gráfico → "Remove Expert"
+   (quita el EA viejo)
+
+2. Presiona F4 para abrir MetaEditor
+
+3. En Navigator (izquierda), busca "NixBridge_v2.mq5"
+
+4. Presiona F7 para compilar
+
+5. Cierra MetaEditor, vuelve a MT5
+
+6. Arrastra "NixBridge_v2" al gráfico de EURUSD
+
+7. Marca "Allow Algo Trading" ✓
+
+8. Click OK
+
+9. Verifica que aparece emoji azul 🎓
+
+10. Habilita AutoTrading (botón verde en toolbar)
+
+=====================================
+DESPUÉS DE ACTUALIZAR
+=====================================
+
+Reinicia el bot desde el escritorio:
+   ./run_bot.sh
+
+Ahora las operaciones tendrán:
+- Stop Loss configurado automáticamente
+- Take Profit configurado automáticamente
+- Se cerrarán solas cuando lleguen a SL o TP
+
+=====================================
+VERIFICAR QUE FUNCIONA
+=====================================
+
+Cuando el bot abra una operación, en MT5 verás:
+- Panel "Trade" → la posición debe tener valores en SL y TP
+- NO deben estar vacíos
+
+Si están vacíos = EA viejo todavía activo, repite los pasos arriba.
+
+Nix 🖤

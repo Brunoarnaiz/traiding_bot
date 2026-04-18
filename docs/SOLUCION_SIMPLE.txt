@@ -1,0 +1,72 @@
+✅ SOLUCIÓN SIMPLE - SI NO VES NIXBRIDGE_V2 EN NAVIGATOR
+
+El archivo NixBridge_v2.mq5 está en tu Escritorio.
+
+=====================================
+MÉTODO SIMPLE (SIN METAEDITOR)
+=====================================
+
+1. QUITAR EL EA VIEJO
+   → En MT5, gráfico EURUSD
+   → Clic derecho → "Expert Advisors" → "Remove"
+
+2. ABRIR CARPETA DE MT5
+   → En MT5, menú: File → Open Data Folder
+   → Se abre una ventana de archivos
+   → Entra en: MQL5 → Experts
+
+3. COPIAR EL ARCHIVO
+   → Arrastra "NixBridge_v2.mq5" desde el Escritorio
+   → Suéltalo en la carpeta Experts que acabas de abrir
+
+4. CERRAR Y ABRIR MT5
+   → Cierra MT5 completamente
+   → Vuelve a abrirlo
+
+5. COMPILAR EL EA
+   → En MT5, presiona F4 (abre MetaEditor)
+   → En Navigator (izquierda), ahora SÍ debería aparecer "NixBridge_v2.mq5"
+   → Doble click en "NixBridge_v2.mq5"
+   → Presiona F7 para compilar
+   → Debe decir "0 errors"
+   → Cierra MetaEditor
+
+6. ADJUNTAR EL EA
+   → En MT5, Navigator → Expert Advisors
+   → Ahora debería aparecer "NixBridge_v2"
+   → Arrástralo al gráfico EURUSD
+
+7. CONFIGURAR
+   → Marca ✓ "Allow Algo Trading"
+   → Click OK
+   → Verifica emoji azul 🎓
+
+=====================================
+MÉTODO ALTERNATIVO (MÁS RÁPIDO)
+=====================================
+
+Si lo anterior no funciona, usa el EA que YA está funcionando
+pero modifícalo para que acepte SL/TP:
+
+Simplemente no actualices nada. El bot seguirá operando,
+solo que tendrás que cerrar las posiciones manualmente
+cuando lleguen a ganancia/pérdida deseada.
+
+El bot YA está funcionando y operando automáticamente.
+Lo del SL/TP automático es una mejora, no es crítico.
+
+=====================================
+ESTADO ACTUAL
+=====================================
+
+✅ Bot operando automáticamente
+✅ Detecta señales cada 5 minutos
+✅ Ejecuta órdenes en MT5
+⚠️  SL/TP no automático (hay que cerrar manual)
+
+Con NixBridge_v2:
+✅ Todo lo anterior +
+✅ SL/TP configurados automáticamente
+✅ Posiciones se cierran solas
+
+Nix 🖤

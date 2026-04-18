@@ -1,0 +1,79 @@
+⚠️  ACTUALIZAR EA A NIXBRIDGE V2 - INSTRUCCIONES SIMPLES
+
+El bot YA está operando pero SIN Stop Loss ni Take Profit automáticos.
+Para activar SL/TP necesitas actualizar el EA.
+
+=====================================
+PASO A PASO (5 minutos)
+=====================================
+
+1. QUITAR EL EA VIEJO
+   → En MT5, gráfico EURUSD
+   → Haz clic derecho en el gráfico
+   → "Expert Advisors" → "Remove"
+   
+2. ABRIR METAEDITOR
+   → En MT5, presiona F4
+   → Se abre MetaEditor
+
+3. ENCONTRAR NIXBRIDGE_V2
+   → En MetaEditor, panel Navigator (izquierda)
+   → Experts → busca "NixBridge_v2.mq5"
+   → Doble click para abrirlo
+
+4. COMPILAR
+   → Con NixBridge_v2.mq5 abierto
+   → Presiona F7 (o botón "Compile" en toolbar)
+   → Espera 2 segundos
+   → Debe decir "0 errors, 0 warnings"
+
+5. CERRAR METAEDITOR
+   → Cierra la ventana de MetaEditor
+   → Vuelve a MT5
+
+6. ADJUNTAR EL NUEVO EA
+   → En MT5, Navigator (izquierda)
+   → Expert Advisors → "NixBridge_v2"
+   → ARRASTRA "NixBridge_v2" al gráfico EURUSD
+
+7. CONFIGURAR
+   → Ventana que aparece:
+   → Pestaña "Common"
+   → Marca ✓ "Allow Algo Trading"
+   → Click OK
+
+8. VERIFICAR
+   → Debe aparecer emoji azul 🎓 en esquina del gráfico
+   → Botón "AutoTrading" debe estar VERDE
+
+=====================================
+DESPUÉS DE ACTUALIZAR
+=====================================
+
+El bot ya está corriendo, no necesitas reiniciarlo.
+
+Cuando abra la PRÓXIMA operación, verás:
+- Stop Loss configurado automáticamente
+- Take Profit configurado automáticamente
+
+Las operaciones se cerrarán solas al llegar a SL o TP.
+
+=====================================
+VERIFICAR QUE FUNCIONA
+=====================================
+
+Espera a que el bot abra otra operación.
+
+En MT5, panel "Trade":
+- La nueva posición DEBE tener valores en SL y TP
+- NO deben estar vacíos
+
+Si siguen vacíos = EA viejo todavía activo, repite pasos.
+
+=====================================
+SI ALGO NO FUNCIONA
+=====================================
+
+Dime qué paso te falla y te ayudo.
+
+Nix 🖤

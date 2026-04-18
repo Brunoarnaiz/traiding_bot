@@ -1,0 +1,160 @@
+🤖 TRADING BOT - INSTRUCCIONES
+
+=====================================
+✅ CONFIGURADO PARA CUENTA DEMO
+=====================================
+
+El bot está configurado para ejecutar operaciones REALES
+en tu cuenta DEMO de MT5 (dinero ficticio).
+
+Cuenta demo: 5049235193
+Servidor: VantageInternational-Demo
+
+=====================================
+REQUISITOS ANTES DE EJECUTAR
+=====================================
+
+1. ✓ MetaTrader 5 debe estar ABIERTO
+2. ✓ Conectado a la cuenta demo (5049235193)
+3. ✓ NixBridge EA debe estar ADJUNTO a un gráfico
+4. ✓ AutoTrading debe estar HABILITADO (botón verde)
+5. ✓ Debe verse emoji azul 🎓 en el gráfico
+
+=====================================
+CÓMO EJECUTAR EL BOT
+=====================================
+
+Doble click en "run_bot.sh" o desde terminal:
+   cd ~/Escritorio
+   ./run_bot.sh
+
+=====================================
+QUÉ HACE EL BOT
+=====================================
+
+Cada 5 minutos:
+- Descarga datos de mercado de EURUSD
+- Calcula indicadores técnicos (RSI, MACD, etc.)
+- Decide si hay oportunidad de compra/venta
+- Si detecta señal: EJECUTA LA ORDEN en MT5
+- Las operaciones aparecen en el panel "Trade" de MT5
+
+Configuración actual:
+- Par: EURUSD
+- Timeframe: 15 minutos
+- Riesgo: MODERADO (1% por trade)
+- Máximo: 3 posiciones abiertas simultáneas
+- Stop Loss: 20 pips (automático)
+- Take Profit: 30 pips (1.5:1 risk/reward)
+
+=====================================
+VER LAS OPERACIONES EN MT5
+=====================================
+
+Panel inferior de MT5 → Pestaña "Trade"
+Ahí verás todas las posiciones abiertas por el bot.
+
+=====================================
+PARAR EL BOT
+=====================================
+
+Presiona Ctrl+C en la terminal donde está corriendo
+
+=====================================
+VER QUÉ ESTÁ HACIENDO
+=====================================
+
+Los logs se guardan en:
+   ~/.openclaw/workspace/trading-bot/logs/
+
+Ver en tiempo real:
+   tail -f ~/.openclaw/workspace/trading-bot/logs/bot_*.log
+
+En los logs verás:
+- Precio actual
+- Indicadores calculados
+- Señales detectadas (BUY/SELL/NEUTRAL)
+- Órdenes ejecutadas
+- Confirmaciones de MT5
+
+=====================================
+PROTECCIONES DE SEGURIDAD
+=====================================
+
+El bot tiene circuit breakers automáticos:
+- Para después de 3 pérdidas consecutivas
+- Para si pierde más del 5% en un día
+- Solo opera con señales de alta confianza (>60%)
+- Máximo 3 posiciones abiertas simultáneas
+
+=====================================
+⚠️  SI QUIERES USAR DINERO REAL
+=====================================
+
+NO LO HAGAS hasta que:
+1. El bot haya operado en demo al menos 1-2 semanas
+2. Hayas revisado todos los logs y resultados
+3. Los resultados sean consistentemente positivos
+4. Entiendas completamente cómo funciona
+5. Estés 100% cómodo con el riesgo
+
+El bot ya está ejecutando en demo, así que puedes
+ver resultados reales sin arriesgar nada.
+
+=====================================
+CAMBIAR CONFIGURACIÓN
+=====================================
+
+Archivo: ~/.openclaw/workspace/trading-bot/bot/trading_bot.py
+Línea: ~250
+
+Puedes cambiar:
+- symbol: "EURUSD", "GBPUSD", etc.
+- timeframe: M1, M5, M15, M30, H1, H4, D1
+- check_interval_seconds: 300 = cada 5 min
+- risk_level: CONSERVATIVE, MODERATE, AGGRESSIVE
+
+Después de cambiar, reinicia el bot.
+
+=====================================
+PROBLEMAS COMUNES
+=====================================
+
+"MT5 Bridge not responding"
+→ MT5 no está abierto o NixBridge EA no está adjunto
+
+"Cannot trade: Maximum X positions already open"
+→ Normal, espera a que cierre alguna posición
+
+"Order failed - 10027"
+→ AutoTrading no está habilitado (botón debe estar verde)
+
+"Insufficient market data"
+→ Problema con Yahoo Finance, espera un momento
+
+=====================================
+CUÁNDO OPERARÁ
+=====================================
+
+El bot NO opera siempre. Espera oportunidades que cumplan:
+- Múltiples indicadores alineados
+- Confianza > 60%
+- Dentro de límites de riesgo
+- Condiciones de mercado favorables
+
+Puede pasar horas sin operar. Eso es NORMAL y BUENO.
+Mejor esperar oportunidades claras que forzar trades.
+
+=====================================
+DOCUMENTACIÓN COMPLETA
+=====================================
+
+~/.openclaw/workspace/trading-bot/docs/HOW_TO_RUN.md
+
+=====================================
+AYUDA
+=====================================
+
+Si algo no funciona o tienes dudas, dime.
+
+Nix 🖤

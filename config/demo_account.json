@@ -1,0 +1,7 @@
+{
+  "broker": "Vantage",
+  "platform": "MT5",
+  "server": "VantageInternational-Demo",
+  "mode": "demo",
+  "note": "Credentials intentionally not stored here in plaintext. Inject separately if/when bridge is added."
+}
